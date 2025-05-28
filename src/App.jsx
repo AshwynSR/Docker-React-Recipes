@@ -23,14 +23,18 @@ const App = () => {
 };
 
 const RecipeList = ({ recipes }) => (
-    <div style={{ display: "flex", flexWrap: "wrap" }}>
-        {recipes.map(recipe => (
-            <div key={recipe.id} style={{ margin: "10px", padding: "10px", border: "1px solid #ccc" }}>
-                <img src={recipe.image} alt={recipe.name} style={{ width: "150px" }} />
-                <h3><Link to={`/recipe/${recipe.id}`}>{recipe.name}</Link></h3>
-            </div>
-        ))}
+    <div>
+        <h1>RECIPES</h1>
+        <div style={{display: "flex", flexWrap: "wrap"}}>
+            {recipes.map(recipe => (
+                <div key={recipe.id} style={{margin: "10px", padding: "10px", border: "1px solid #ccc"}}>
+                    <img src={recipe.image} alt={recipe.name} style={{width: "150px"}}/>
+                    <h3><Link to={`/recipe/${recipe.id}`}>{recipe.name}</Link></h3>
+                </div>
+            ))}
+        </div>
     </div>
+
 );
 
 export default App;
