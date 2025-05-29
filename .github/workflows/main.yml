@@ -22,8 +22,8 @@ jobs:
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
           aws_secret_key: ${{ secrets.AWS_SECRET_KEY }}
-          application_name: Recipes-Frontend
-          environment_name: Recipes-Frontend-env
+          application_name: Docker-Recipes
+          environment_name: Docker-Recipes-env
           existing_bucket_name: elasticbeanstalk-ap-south-1-980104576768
           region: ap-south-1
           version_label: ${{ github.sha }}
